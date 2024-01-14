@@ -2,7 +2,7 @@ import Task from "../Task/Task";
 // eslint-disable-next-line react/prop-types
 export default function TaskList({ todos, onChangeTodo, onDeleteTodo }) {
   return (
-    <ul>
+    <ul className=" p-2">
       {/* eslint-disable-next-line react/prop-types */}
       {todos.map((todo) => (
         <li key={todo.id}>

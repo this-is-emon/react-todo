@@ -41,14 +41,14 @@ function App() {
   }
 
   return (
-    <>
+    <div className=" bg-slate-400 rounded-lg">
       <AddTodo onAddTodo={handleAddTodo} />
       <TaskList
         todos={todos}
         onChangeTodo={handleChangeTodo}
         onDeleteTodo={handleDeleteTodo}
       />
-    </>
+    </div>
   );
 }
 

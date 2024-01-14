@@ -24,8 +24,13 @@ export default function Task({ todo, onChange, onDelete }) {
     todoContent = (
       <>
         {/* eslint-disable-next-line react/prop-types */}
-        {todo.title}
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        {todo.title}{" "}
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 m-1 rounded"
+          onClick={() => setIsEditing(true)}
+        >
+          Edit
+        </button>
       </>
     );
   }
@@ -42,9 +47,14 @@ export default function Task({ todo, onChange, onDelete }) {
           });
         }}
       />
-      {todoContent}
-      {/* eslint-disable-next-line react/prop-types */}
-      <button onClick={() => onDelete(todo.id)}>Delete</button>
+      {todoContent} {/* eslint-disable-next-line react/prop-types */}
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded"
+        // eslint-disable-next-line react/prop-types
+        onClick={() => onDelete(todo.id)}
+      >
+        Delete
+      </button>
     </label>
   );
 }

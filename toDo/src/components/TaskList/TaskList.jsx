@@ -1,15 +1,11 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import Task from "../Task/Task";
-
-function TaskList() {
+export default function TaskList({ todos, onChangeTodo, onDeleteTodo }) {
   return (
-    <>
-      <b>TaskList :</b>
-      <br />
-      <Task />
-    </>
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <Task todo={todo} onChange={onChangeTodo} onDelete={onDeleteTodo} />
+        </li>
+      ))}
+    </ul>
   );
 }
-
-export default TaskList;

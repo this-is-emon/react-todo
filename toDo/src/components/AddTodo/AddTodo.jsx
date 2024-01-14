@@ -1,12 +1,23 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
+import { useState } from "react";
 
-function AddTodo() {
+// eslint-disable-next-line react/prop-types
+export default function AddTodo({ onAddTodo }) {
+  const [title, setTitle] = useState("");
   return (
     <>
-      <b>AddTodo</b>
+      <input
+        placeholder="Add todo"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <button
+        onClick={() => {
+          setTitle("");
+          onAddTodo(title);
+        }}
+      >
+        Add
+      </button>
     </>
   );
 }
-
-export default AddTodo;

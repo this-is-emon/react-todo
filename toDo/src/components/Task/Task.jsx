@@ -17,7 +17,12 @@ export default function Task({ todo, onChange, onDelete }) {
             });
           }}
         />
-        <button onClick={() => setIsEditing(false)}>Save</button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 m-1 rounded"
+          onClick={() => setIsEditing(false)}
+        >
+          Save
+        </button>
       </>
     );
   } else {
